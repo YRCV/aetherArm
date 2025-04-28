@@ -34,7 +34,7 @@ def InverseKinematics(x, y, z, gripper_angle):
 
     # Elbow pitch
     alpha = np.acos((A1 ** 2 + A2 ** 2 - d ** 2) / (2 * A1 * A2))
-    theta2 = np.pi - alpha #180 - alpha
+    theta2 = alpha - np.pi #180 - alpha
 
     # Shoulder pitch
     lambda1 = np.atan((A2 * np.sin(theta2)) / (A1 + A2 * np.cos(theta2)))
@@ -48,20 +48,19 @@ def InverseKinematics(x, y, z, gripper_angle):
 
 # arm section lengths [mm]
 # A0 = 0 // first section is the base and only rotates, hence no length
-A1 = 200 # shoulder
-A2 = 180 # elbow
-A3 = 50 # gripper
+A1 = 90 # shoulder
+A2 = 140 # elbow
+A3 = 70 # gripper
 
 # 3d plot animation
 angle_range = 90
 angle_step = 2
-angles = list(range(-angle_range, angle_range + 1, angle_step)) + list(range(angle_range-1, -angle_range - 1, -angle_step))
-for i in range(5):
-    angle = angles + angles
+gripper_angles = list(range(-angle_range, angle_range + 1, angle_step)) + list(range(angle_range-1, -angle_range - 1, -angle_step))
+
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-for gripper_angle in angles:
+for gripper_angle in gripper_angles:
     #----InverseKinematics----
     #coordinates
     x = 100
