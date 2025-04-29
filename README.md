@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/3f8d33f0-c647-4cf8-83ec-3d47a3b1c267" width="128" height="128" class="center">
+<img src="https://github.com/user-attachments/assets/3f8d33f0-c647-4cf8-83ec-3d47a3b1c267" alt="GoldenRatio" width="128" height="128" class="center">
 
 This project is being created by Yahil Corcino, David Rapozo, Annabel Estrada Ruiz, and Moses Espejo. 
 
