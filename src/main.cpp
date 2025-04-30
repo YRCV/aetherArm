@@ -7,10 +7,17 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("Xiao is running ");
+  Serial.println("Xiao is running 2 ");
   digitalWrite(LED_BUILTIN, HIGH); 
   delay(1000);                    
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
-  //testing
+  digitalWrite(LED_BUILTIN, HIGH); 
+  delay(250);                    
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(250);
+  digitalWrite(LED_BUILTIN, HIGH); 
+  delay(250);                    
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(250);
 }
